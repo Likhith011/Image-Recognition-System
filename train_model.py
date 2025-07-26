@@ -39,8 +39,8 @@ history = model.fit(x_train, y_train_cat, epochs=10, batch_size=64,
 
 # Save the model
 os.makedirs('model', exist_ok=True)
-model.save('model/cnn_model.keras')
-print("✅ Model saved as model/cnn_model.keras")
+model.save('cnn_model.keras')
+print("✅ Model saved as cnn_model.keras")
 
 # Confusion matrix
 y_pred = model.predict(x_test)
