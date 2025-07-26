@@ -7,9 +7,9 @@ from tensorflow.keras.models import load_model
 from utils import preprocess_image
 
 app = Flask(__name__)
-UPLOAD_FOLDER = 'static/uploads'
+UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-model = load_model('model/cnn_model.keras')
+model = load_model('cnn_model.keras')
 classes = ['airplane','automobile','bird','cat','deer','dog','frog','horse','ship','truck']
 
 @app.route('/', methods=['GET', 'POST'])
